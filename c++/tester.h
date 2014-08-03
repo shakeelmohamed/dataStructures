@@ -16,7 +16,7 @@ static void areEqual(int a, int b)
 
 static void isTrue(bool a)
 {
-    if (!a || a != 1)
+    if (!a && a != 1)
     {
         cout << "Test error: " << a << " is not true (or 1)." << endl;
         exit(0);

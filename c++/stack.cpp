@@ -50,18 +50,6 @@ int main()
     return 0;
 }
 
-Stack::Stack()
-{
-    this->index = 0;
-    this->size = 10;
-    this->data = new unsigned[this->size];
-}
-
-Stack::~Stack()
-{
-    delete this->data;
-}
-
 bool Stack::isFull()
 {
     return this->index == this->size;
