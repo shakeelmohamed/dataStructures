@@ -1,7 +1,7 @@
 // Implementation file for Stack class, includes some tests in the main method
 
 #include "stack.h"
-#include "tester.h"
+#include "assert.h"
 #include <iostream>
 using namespace std;
 
