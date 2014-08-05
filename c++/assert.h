@@ -8,7 +8,8 @@ using namespace std;
 
 static void areEqual(int a, int b)
 {
-    if (a != b) {
+    if (a != b)
+    {
         cout << "Test error: " << a << " and " << b << " are not equal." << endl;
         exit(1);
     }
