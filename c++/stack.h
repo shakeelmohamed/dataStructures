@@ -5,10 +5,12 @@
 
 class Stack
 {
+private:
     int size;
     unsigned* data;
     int index;
     void resize();
+
 public:
     Stack(const Stack &old) // TODO: test
     {

@@ -1,3 +1,5 @@
+// Implementation file for a binary search tree
+
 #include <iostream>
 #include "bst.h"
 #include "assert.h"

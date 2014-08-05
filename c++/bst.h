@@ -12,7 +12,8 @@ struct Node
 
 class BST
 {
-    // void balance();
+private:
+    // void balance(); // TODO: implement
     unsigned _countNodeDescendents(Node*, unsigned);
     void _pre(Node*);
     void _order(Node*);
@@ -35,7 +36,7 @@ public:
 
     Node* root;
     void insert(unsigned);
-    // bool remove(unsigned);
+    // bool remove(unsigned); // TODO: implement
     bool contains(unsigned);
     unsigned size();
     void preTraversal();
