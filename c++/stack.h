@@ -6,7 +6,7 @@
 class Stack
 {
     int size;
-    unsigned *data;
+    unsigned* data;
     int index;
     void resize();
 public:

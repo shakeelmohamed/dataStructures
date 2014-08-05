@@ -6,19 +6,18 @@
 struct Node
 {
     unsigned value;
-    Node *left;
-    node *right;
+    Node* left;
+    Node* right;
 };
 
-Class BST
+class BST
 {
-    void balance();
-    unsigned items;
-
+    // void balance();
+    unsigned countNodeDescendents(Node*, unsigned);
 public:
     BST()
     {
-        items = 0;
+        root = 0;
     }
 
     ~BST()
@@ -30,15 +29,15 @@ public:
 
     // TODO: copy constructor
 
-    Node *root;
+    Node* root;
     void insert(unsigned);
-    void insert(&Node);
-    bool remove(unsigned);
+    // void insert(&Node);
+    // bool remove(unsigned);
     bool contains(unsigned);
     unsigned size();
-    void preTraversal();
-    void orderTraveral();
-    void postTraveral();
+    // void preTraversal();
+    // void orderTraveral();
+    // void postTraveral();
 };
 
 #endif
