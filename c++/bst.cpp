@@ -30,6 +30,12 @@ int main()
     areEqual(6, tree.root->right->left->value);
     areEqual(5, tree.size());
 
+    tree.orderTraversal();
+    cout << endl;
+    tree.preTraversal();
+    cout << endl;
+    tree.postTraversal();
+
     return 0;
 }
 
@@ -105,7 +111,8 @@ void BST::insert(unsigned value)
     }
 }
 
-unsigned BST::countNodeDescendents(Node* target, unsigned currentCount)
+
+unsigned BST::_countNodeDescendents(Node* target, unsigned currentCount)
 {
     if (!target)
     {
@@ -114,13 +121,78 @@ unsigned BST::countNodeDescendents(Node* target, unsigned currentCount)
     else 
     {
         currentCount++; // Increment for the target existing
-        currentCount += countNodeDescendents(target->left, 0);
-        currentCount += countNodeDescendents(target->right, 0);
+        currentCount += _countNodeDescendents(target->left, 0);
+        currentCount += _countNodeDescendents(target->right, 0);
         return currentCount;
     }
 }
 
 unsigned BST::size()
 {
-    return countNodeDescendents(root, 0);
+    return _countNodeDescendents(root, 0);
+}
+
+void BST::preTraversal()
+{
+    // TODO: accept a string parameter
+    _pre(root); 
+}
+
+void BST::_pre(Node* target)
+{
+    if (target)
+    {
+        cout << target->value << endl;
+    }
+    if (target->left)
+    {
+        _pre(target->left);
+    }
+    if (target->right)
+    {
+        _pre(target->right);
+    }
+}
+
+void BST::orderTraversal()
+{
+    // TODO: accept a string parameter
+    _order(root); 
+}
+
+void BST::_order(Node* target)
+{
+    if (target->left)
+    {
+        _order(target->left);
+    }
+    if (target)
+    {
+        cout << target->value << endl;
+    }
+    if (target->right)
+    {
+        _order(target->right);
+    }
+}
+void BST::postTraversal()
+{
+    // TODO: accept a string parameter
+    _post(root); 
+}
+
+void BST::_post(Node* target)
+{
+    if (target->left)
+    {
+        _post(target->left);
+    }
+    if (target->right)
+    {
+        _post(target->right);
+    }
+    if (target)
+    {
+        cout << target->value << endl;
+    }
 }

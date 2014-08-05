@@ -13,11 +13,15 @@ struct Node
 class BST
 {
     // void balance();
-    unsigned countNodeDescendents(Node*, unsigned);
+    unsigned _countNodeDescendents(Node*, unsigned);
+    void _pre(Node*);
+    void _order(Node*);
+    void _post(Node*);    
+
 public:
     BST()
     {
-        root = 0;
+        root = 0; // Null out the root pointer
     }
 
     ~BST()
@@ -31,13 +35,12 @@ public:
 
     Node* root;
     void insert(unsigned);
-    // void insert(&Node);
     // bool remove(unsigned);
     bool contains(unsigned);
     unsigned size();
-    // void preTraversal();
-    // void orderTraveral();
-    // void postTraveral();
+    void preTraversal();
+    void orderTraversal();
+    void postTraversal();
 };
 
 #endif
