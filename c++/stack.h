@@ -12,14 +12,14 @@ private:
     void resize();
 
 public:
-    Stack(const Stack &old) // TODO: test
+    Stack(const Stack &old)
     {
         this->index = 0;
         this->size = old.size;
         delete this->data;
         this->data = new unsigned[this->size];
         
-        for (int i = 0; i < old.size; ++i)
+        for (int i = 0; i < old.size; i++)
         {
             this->data[i] = old.data[i];
         }
@@ -37,16 +37,16 @@ public:
         this->data = new unsigned[this->size];
     }
 
-    void operator=(const Stack &old) // TODO: test
+    void operator=(const Stack &old)
     {
         if (this != &old)
         {
-            this->index = 0;
+            this->index = old.index;
             this->size = old.size;
             delete this->data;
             this->data = new unsigned[this->size];
             
-            for (int i = 0; i < old.size; ++i)
+            for (int i = 0; i < old.size; i++)
             {
                 this->data[i] = old.data[i];
             }       

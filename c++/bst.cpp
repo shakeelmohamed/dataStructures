@@ -10,27 +10,27 @@ int main()
 {
     BST tree;
 
-    areEqual(0, tree.size());
+    areEqualInts(0, tree.size());
 
     tree.insert(5);
-    areEqual(5, tree.root->value);
-    areEqual(1, tree.size());
+    areEqualInts(5, tree.root->value);
+    areEqualInts(1, tree.size());
 
     tree.insert(3);
-    areEqual(3, tree.root->left->value);
-    areEqual(2, tree.size());
+    areEqualInts(3, tree.root->left->value);
+    areEqualInts(2, tree.size());
 
     tree.insert(4);
-    areEqual(4, tree.root->left->right->value);
-    areEqual(3, tree.size());
+    areEqualInts(4, tree.root->left->right->value);
+    areEqualInts(3, tree.size());
 
     tree.insert(7);
-    areEqual(7, tree.root->right->value);
-    areEqual(4, tree.size());
+    areEqualInts(7, tree.root->right->value);
+    areEqualInts(4, tree.size());
 
     tree.insert(6);
-    areEqual(6, tree.root->right->left->value);
-    areEqual(5, tree.size());
+    areEqualInts(6, tree.root->right->left->value);
+    areEqualInts(5, tree.size());
 
     tree.orderTraversal();
     cout << endl;

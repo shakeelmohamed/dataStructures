@@ -27,22 +27,22 @@ int main()
     
     isTrue(s.isFull());
     isTrue(!s.isEmpty());
-    areEqual(1, s.pop());
-    areEqual(3, s.pop());
+    areEqualInts(1, s.pop());
+    areEqualInts(3, s.pop());
 
     s.push(4);
     s.push(8);
 
-    areEqual(8, s.pop());
-    areEqual(4, s.pop());
-    areEqual(4, s.pop());
-    areEqual(9, s.pop());
-    areEqual(8, s.pop());
-    areEqual(2, s.pop());
-    areEqual(5, s.pop());
-    areEqual(7, s.pop());
-    areEqual(2, s.pop());
-    areEqual(1, s.pop());
+    areEqualInts(8, s.pop());
+    areEqualInts(4, s.pop());
+    areEqualInts(4, s.pop());
+    areEqualInts(9, s.pop());
+    areEqualInts(8, s.pop());
+    areEqualInts(2, s.pop());
+    areEqualInts(5, s.pop());
+    areEqualInts(7, s.pop());
+    areEqualInts(2, s.pop());
+    areEqualInts(1, s.pop());
 
     isTrue(s.isEmpty());
     isTrue(!s.isFull());
