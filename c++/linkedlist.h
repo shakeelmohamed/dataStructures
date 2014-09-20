@@ -27,18 +27,26 @@ public:
     LinkedList(const LinkedList &old) // TODO: test
     {
         // TODO: iterate the current list, deleting each node
+        Node* temp = head;
+        while(temp)
+        {
+            temp = head->next;
+            delete head;
+            head = head->next;
+        }
         // TODO: copy over node, by node
     }
 
     ~LinkedList()
     {
         // TODO: iterate the current list, deleting each node
-        Node* temp = 0;
+        Node* temp = head;
+        Node* next = 0;
         while (temp)
         {
-            temp = head;
-            head = head->next;
+            next = temp->next;
             delete temp;
+            temp = next;
         }
     }
 
